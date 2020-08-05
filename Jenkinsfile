@@ -25,11 +25,6 @@ pipeline {
         }
       }
     }
-    stage('Sleep') {
-      steps {
-//       sleep 300
-      }
-    }
     stage('Deliver') {
       steps {
         sh './jenkins/scripts/deliver.sh'
