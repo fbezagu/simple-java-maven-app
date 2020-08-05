@@ -2,7 +2,8 @@ pipeline {
   agent {
     docker {
       image 'maven:3-alpine'
-      args '-v /m2:/root/.m2 -u root'
+      args '-v /m2:/root/.m2:z -u root'
+      reuseNode true
     }
   }
   options {
@@ -26,7 +27,7 @@ pipeline {
     }
     stage('Sleep') {
       steps {
-        sleep 300
+ #       sleep 300
       }
     }
     stage('Deliver') {
