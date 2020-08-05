@@ -24,11 +24,15 @@ pipeline {
         }
       }
     }
-   stage('Deliver') {
-     steps {
-       sh './jenkins/scripts/deliver.sh'
-     }
-   }
-
+    stage('Sleep') {
+      steps {
+        sleep 180
+      }
+    }
+    stage('Deliver') {
+      steps {
+        sh './jenkins/scripts/deliver.sh'
+      }
+    }
   }
 }
