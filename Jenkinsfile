@@ -27,7 +27,7 @@ pipeline {
     }
     stage('Sleep') {
       steps {
- #       sleep 300
+//       sleep 300
       }
     }
     stage('Deliver') {
